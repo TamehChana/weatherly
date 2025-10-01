@@ -1,6 +1,6 @@
 # Weatherly
 
-A modern React Native + Expo app that provides local weather, 7‑day forecasts, AI photo analysis, smart alerts, and voice queries.
+Weatherly is a modern, cross‑platform weather application built with React Native and Expo. It combines reliable weather data with AI‑assisted features like photo‑based sky analysis, smart alerts, and voice queries. The project showcases a pragmatic mobile stack: React 19 with hooks, React Navigation for routing, Axios for networking, and Expo modules for sensors, imaging, and device services. It targets Android, iOS, and web from a single codebase and emphasizes clean UI, responsive layouts, and maintainable architecture.
 
 ![Expo](https://img.shields.io/badge/Expo-53.x-green)
 ![React Native](https://img.shields.io/badge/React%20Native-0.79.x-blue)
@@ -16,10 +16,14 @@ A modern React Native + Expo app that provides local weather, 7‑day forecasts,
 
 ## Tech Stack
 
-- React Native (Expo)
-- React Navigation
-- Axios for networking
-- Expo Location, Image Picker, Linear Gradient
+- React Native (Expo SDK 53): unified toolchain for Android/iOS/web, OTA updates
+- React 19 + Hooks: functional components and predictable state
+- React Navigation (stack/tabs): screen routing and transitions
+- Axios: HTTP client for weather API integration
+- Expo Location: geolocation for local weather
+- Expo Image Picker: camera/gallery for photo analysis
+- Expo Linear Gradient: polished UI styling
+- Expo Status Bar and safe-area helpers: consistent device behavior
 
 ## Getting Started
 

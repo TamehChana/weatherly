@@ -1,5 +1,6 @@
 {
   "name": "weatherly-new",
+  "description": "Cross-platform Expo app with React 19, React Navigation, Axios, and Expo modules (Location, Image Picker, Linear Gradient). Features local forecasts, 7-day outlook, AI photo analysis, smart alerts, and voice queries.",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
