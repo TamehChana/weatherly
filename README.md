@@ -1,202 +1,83 @@
-# 🌤️ Weatherly - AI-Powered Weather App
+# Weatherly
 
-A next-generation weather forecasting app that delivers hyper-local, personalized weather insights using machine learning, natural language generation, and real-time data fusion.
+A modern React Native + Expo app that provides local weather, 7‑day forecasts, AI photo analysis, smart alerts, and voice queries.
 
-![Weatherly App](https://img.shields.io/badge/React%20Native-0.72.0-blue)
-![Expo](https://img.shields.io/badge/Expo-49.0.0-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Expo](https://img.shields.io/badge/Expo-53.x-green)
+![React Native](https://img.shields.io/badge/React%20Native-0.79.x-blue)
+![React](https://img.shields.io/badge/React-19.0.0-61dafb)
 
-## 🚀 Features
+## Features
 
-### 🤖 **AI-Powered Capabilities**
-- **ML Weather Forecasting** - LSTM/GRU models for high-accuracy predictions
-- **AI Weather Assistant** - Chat with AI for personalized weather advice
-- **Personalized Insights** - Smart tips based on user location, preferences, and habits
-- **Photo Weather Analysis** - Analyze sky photos using AI for weather prediction
-- **Smart Weather Alerts** - AI-powered severe weather detection using anomaly detection
-- **Climate Trends** - Historical data analysis and climate insights
-- **Voice Weather Queries** - Natural language processing for weather questions
+- Current conditions and 7‑day forecast
+- AI photo weather analysis (camera/gallery)
+- Smart weather alerts
+- Voice weather queries
+- Beautiful gradient UI with side menu
 
-### 📱 **Modern UI/UX**
-- **Vibrant Design** - Beautiful blue gradient theme
-- **Interactive Side Menu** - Easy access to all AI features
-- **Real-time Updates** - Live weather data and forecasts
-- **Responsive Design** - Works across different screen sizes
-- **Smooth Animations** - Engaging user experience
+## Tech Stack
 
-### 🔧 **Technical Features**
-- **Cross-platform** - React Native with Expo
-- **Navigation** - Stack and tab navigation
-- **State Management** - React hooks for data management
-- **API Integration** - Weather API with fallback mock data
-- **Image Processing** - Camera and gallery integration
-- **Permissions Handling** - Location and camera permissions
+- React Native (Expo)
+- React Navigation
+- Axios for networking
+- Expo Location, Image Picker, Linear Gradient
 
-## 📸 Screenshots
-
-### Home Screen
-- Main weather card with current conditions
-- News weather section with AI insights
-- Calendar view with daily forecasts
-- Interactive side menu with AI features
-
-### AI Features
-- **Photo Analysis** - Upload sky photos for AI weather prediction
-- **Smart Alerts** - AI-powered severe weather detection
-- **Voice Assistant** - Natural language weather queries
-- **Personalized Insights** - Smart recommendations based on habits
-
-## 🛠️ Installation
+## Getting Started
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js 18+
 - npm or yarn
-- Expo CLI
-- iOS Simulator or Android Emulator (optional)
+- Expo CLI (`npm i -g expo`)
 
-### Setup Instructions
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/weatherly-new.git
-cd weatherly-new
-```
-
-2. **Install dependencies**
+### Install
 ```bash
 npm install
 ```
 
-3. **Configure Weather API (Optional)**
-   - Get free API key from [OpenWeatherMap](https://openweathermap.org/api)
-   - Update `src/config/api.js` with your API key
-   - Uncomment real API calls in `src/services/weatherService.js`
+### Configure API (optional)
+Update `src/config/api.js` with your weather API key if using a live provider.
 
-4. **Start the development server**
+### Run
 ```bash
 npm start
+# press a for Android, i for iOS, w for web
 ```
 
-5. **Run on device/simulator**
-   - Scan QR code with Expo Go app
-   - Or press 'a' for Android, 'i' for iOS
-
-## 🔧 Configuration
-
-### Weather API Setup
-1. Sign up at [OpenWeatherMap](https://openweathermap.org/api)
-2. Get your free API key
-3. Update `src/config/api.js`:
-```javascript
-export const API_CONFIG = {
-  WEATHER_API_KEY: 'your_api_key_here',
-  // ... other config
-};
-```
-
-### Environment Variables
-Create a `.env` file for production:
-```env
-WEATHER_API_KEY=your_api_key_here
-WEATHER_BASE_URL=https://api.openweathermap.org/data/2.5
-```
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-weatherly-new/
-├── src/
-│   ├── screens/
-│   │   ├── HomeScreen.js          # Main weather dashboard
-│   │   ├── LandingScreen.js       # Welcome screen
-│   │   ├── PhotoAnalysisScreen.js # AI photo analysis
-│   │   ├── SmartAlertsScreen.js   # AI weather alerts
-│   │   ├── VoiceScreen.js         # AI voice assistant
-│   │   ├── ForecastScreen.js      # Weather forecasts
-│   │   ├── SettingsScreen.js      # App settings
-│   │   └── SideMenu.js           # AI features menu
-│   ├── navigation/
-│   │   └── AppNavigator.js       # Navigation setup
-│   ├── services/
-│   │   ├── weatherService.js     # Weather API service
-│   │   └── aiService.js          # AI assistant service
-│   ├── constants/
-│   │   └── colors.js             # App color scheme
-│   └── config/
-│       └── api.js                # API configuration
-├── assets/                       # App icons and images
-├── App.js                        # Main app component
-└── package.json                  # Dependencies
+src/
+  screens/
+    HomeScreen.js
+    LandingScreen.js
+    PhotoAnalysisScreen.js
+    SmartAlertsScreen.js
+    VoiceScreen.js
+    ForecastScreen.js
+    SettingsScreen.js
+    SideMenu.js
+  navigation/
+    AppNavigator.js
+  services/
+    weatherService.js
+    aiService.js
+  constants/
+    colors.js
+  config/
+    api.js
+App.js
 ```
 
-## 🤖 AI Features Deep Dive
+## Scripts
 
-### Machine Learning Weather Forecasting
-- Uses LSTM/GRU neural networks
-- Trained on historical weather data
-- Provides hyper-local predictions
-- 95% accuracy in weather forecasting
+- `npm start` – start Expo
+- `npm run android` – run on Android
+- `npm run ios` – run on iOS
+- `npm run web` – run on web
 
-### AI Photo Analysis
-- Cloud type classification
-- Weather pattern recognition
-- Confidence scoring
-- Smart recommendations
+## Contributing
 
-### Smart Alerts System
-- Anomaly detection algorithms
-- Pattern recognition for severe weather
-- Early warning system (2.5h average)
-- Customizable alert preferences
+PRs welcome. Please open an issue to discuss major changes.
 
-### Voice Assistant
-- Natural language processing
-- Context-aware responses
-- Personalized weather advice
-- Multi-language support
+## License
 
-## 🎯 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [OpenWeatherMap](https://openweathermap.org/) for weather data
-- [Expo](https://expo.dev/) for the development platform
-- [React Navigation](https://reactnavigation.org/) for navigation
-- [Expo Vector Icons](https://expo.github.io/vector-icons/) for icons
-
-## 📞 Support
-
-If you have any questions or need help:
-- Create an [Issue](https://github.com/yourusername/weatherly-new/issues)
-- Join our [Discord](https://discord.gg/weatherly)
-- Email: support@weatherly.app
-
-## 🚀 Roadmap
-
-- [ ] Real-time weather radar integration
-- [ ] Advanced AI model training
-- [ ] Offline weather predictions
-- [ ] Social weather sharing
-- [ ] Weather-based recommendations
-- [ ] Multi-language support
-- [ ] Dark mode theme
-- [ ] Widget support
-
----
-
-**Made with ❤️ by the Weatherly Team**
-
-*Empowering users with AI-driven weather insights* 
+MIT
